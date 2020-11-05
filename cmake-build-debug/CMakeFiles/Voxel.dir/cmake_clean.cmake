@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Voxel.dir/src/Box.cpp.obj"
   "CMakeFiles/Voxel.dir/src/RayTracer.cpp.obj"
   "CMakeFiles/Voxel.dir/src/Utils.cpp.obj"
   "CMakeFiles/Voxel.dir/src/main.cpp.obj"

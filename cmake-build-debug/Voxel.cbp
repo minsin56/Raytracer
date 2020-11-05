@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/vincent/CLionProjects/Voxel/src/Box.cpp">
+			<Option target="Voxel"/>
+		</Unit>
+		<Unit filename="C:/Users/vincent/CLionProjects/Voxel/src/Box.h">
+			<Option target="Voxel"/>
+		</Unit>
 		<Unit filename="C:/Users/vincent/CLionProjects/Voxel/src/RayTracer.cpp">
 			<Option target="Voxel"/>
 		</Unit>

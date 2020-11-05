@@ -3,6 +3,7 @@
 #include "Math/Ray.h"
 #include "RayTraceObject.h"
 #include<vector>
+#include "Box.h"
 #define MaxRef
 
 
@@ -47,55 +48,6 @@ public:
     }
 };
 
-struct Box: public RaytraceObject
-{
-public:
-    glm::vec3 Min,Max;
-    
-    Box(glm::vec3 Min,glm::vec3 Max)
-    {
-        this->Min = Min;
-        this->Max = Max;
-    }
-    
-    bool Intersects(Ray Ray, double &t) override
-    {
-        float TMin = (Min.x - Ray.Origin.x) / Ray.Direction.x;
-        float TMax = (Max.x - Ray.Origin.x) / Ray.Direction.x;
-        
-        if (TMin > TMax) std::swap(TMin,TMax);
-        
-        float TYMin = (Min.y - Ray.Origin.y) / Ray.Direction.y;
-        float TYMax = (Max.y - Ray.Origin.y) / Ray.Direction.y;
-        
-        if((TMin > TYMax) || (TYMin > TMax))
-        {
-            return false;
-        }
-        
-        if (TMax > TYMax)
-        {
-            TMax = TYMax;
-        }
-        
-        float TZMin = (Min.z - Ray.Origin.z) / Ray.Direction.z;
-        float TZMax = (Max.z - Ray.Origin.z) / Ray.Direction.z;
-        
-        if (TZMin > TZMax) std::swap(TZMin,TZMax);
-        
-        if ((TMin > TZMax) || (TZMin > TMax))
-        {
-            return false;
-        }
-        
-        if(TZMax < TMax)
-        {
-            TMax = TZMax;
-        }
-        
-        return true;
-    }
-};        
 
 class RayTracer
 {

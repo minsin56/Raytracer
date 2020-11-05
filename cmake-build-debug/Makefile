@@ -142,6 +142,33 @@ Voxel/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Voxel.dir\build.make CMakeFiles/Voxel.dir/build
 .PHONY : Voxel/fast
 
+src/Box.obj: src/Box.cpp.obj
+
+.PHONY : src/Box.obj
+
+# target to build an object file
+src/Box.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Voxel.dir\build.make CMakeFiles/Voxel.dir/src/Box.cpp.obj
+.PHONY : src/Box.cpp.obj
+
+src/Box.i: src/Box.cpp.i
+
+.PHONY : src/Box.i
+
+# target to preprocess a source file
+src/Box.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Voxel.dir\build.make CMakeFiles/Voxel.dir/src/Box.cpp.i
+.PHONY : src/Box.cpp.i
+
+src/Box.s: src/Box.cpp.s
+
+.PHONY : src/Box.s
+
+# target to generate assembly for a file
+src/Box.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Voxel.dir\build.make CMakeFiles/Voxel.dir/src/Box.cpp.s
+.PHONY : src/Box.cpp.s
+
 src/RayTracer.obj: src/RayTracer.cpp.obj
 
 .PHONY : src/RayTracer.obj
@@ -232,6 +259,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Voxel
+	@echo ... src/Box.obj
+	@echo ... src/Box.i
+	@echo ... src/Box.s
 	@echo ... src/RayTracer.obj
 	@echo ... src/RayTracer.i
 	@echo ... src/RayTracer.s

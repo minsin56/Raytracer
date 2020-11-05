@@ -1630,6 +1630,14 @@ detail/setup.hpp
 detail/func_vector_relational.inl
 ../libs/include/glm/detail/func_vector_relational.inl
 
+C:/Users/vincent/CLionProjects/Voxel/src/Box.cpp
+Box.h
+C:/Users/vincent/CLionProjects/Voxel/src/Box.h
+
+C:/Users/vincent/CLionProjects/Voxel/src/Box.h
+RayTraceObject.h
+C:/Users/vincent/CLionProjects/Voxel/src/RayTraceObject.h
+
 C:/Users/vincent/CLionProjects/Voxel/src/Math/Ray.h
 glm/glm.hpp
 C:/Users/vincent/CLionProjects/Voxel/src/Math/glm/glm.hpp
@@ -1653,10 +1661,26 @@ Math/Ray.h
 C:/Users/vincent/CLionProjects/Voxel/src/Math/Ray.h
 RayTraceObject.h
 C:/Users/vincent/CLionProjects/Voxel/src/RayTraceObject.h
+vector
+-
+Box.h
+C:/Users/vincent/CLionProjects/Voxel/src/Box.h
 
 C:/Users/vincent/CLionProjects/Voxel/src/Utils.h
 stdint.h
 -
 SDL2/SDL.h
 C:/Users/vincent/CLionProjects/Voxel/src/SDL2/SDL.h
+
+C:/Users/vincent/CLionProjects/Voxel/src/main.cpp
+iostream
+-
+SDL2/SDL.h
+C:/Users/vincent/CLionProjects/Voxel/src/SDL2/SDL.h
+Utils.h
+C:/Users/vincent/CLionProjects/Voxel/src/Utils.h
+Math/Ray.h
+C:/Users/vincent/CLionProjects/Voxel/src/Math/Ray.h
+RayTracer.h
+C:/Users/vincent/CLionProjects/Voxel/src/RayTracer.h
 

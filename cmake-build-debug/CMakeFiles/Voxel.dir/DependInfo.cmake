@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "C:/Users/vincent/CLionProjects/Voxel/src/Box.cpp" "C:/Users/vincent/CLionProjects/Voxel/cmake-build-debug/CMakeFiles/Voxel.dir/src/Box.cpp.obj"
   "C:/Users/vincent/CLionProjects/Voxel/src/RayTracer.cpp" "C:/Users/vincent/CLionProjects/Voxel/cmake-build-debug/CMakeFiles/Voxel.dir/src/RayTracer.cpp.obj"
   "C:/Users/vincent/CLionProjects/Voxel/src/Utils.cpp" "C:/Users/vincent/CLionProjects/Voxel/cmake-build-debug/CMakeFiles/Voxel.dir/src/Utils.cpp.obj"
   "C:/Users/vincent/CLionProjects/Voxel/src/main.cpp" "C:/Users/vincent/CLionProjects/Voxel/cmake-build-debug/CMakeFiles/Voxel.dir/src/main.cpp.obj"
