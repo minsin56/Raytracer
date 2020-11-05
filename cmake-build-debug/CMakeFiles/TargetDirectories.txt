@@ -1,0 +1,3 @@
+C:/Users/vincent/CLionProjects/Voxel/cmake-build-debug/CMakeFiles/Voxel.dir
+C:/Users/vincent/CLionProjects/Voxel/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/vincent/CLionProjects/Voxel/cmake-build-debug/CMakeFiles/rebuild_cache.dir

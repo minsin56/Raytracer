@@ -1,0 +1,4 @@
+"C:\Users\vincent\AppData\Local\JetBrains\CLion 2020.2.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\vincent\CLionProjects\Voxel
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/vincent/CLionProjects/Voxel/cmake-build-debug
