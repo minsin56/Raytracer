@@ -13,6 +13,8 @@ bool Box::Intersects(Ray Ray, double &t)
 
     float TYMin = (Min.y - Ray.Origin.y) / Ray.Direction.y;
     float TYMax = (Max.y - Ray.Origin.y) / Ray.Direction.y;
+    
+    if (TYMin > TYMax) std::swap(TYMin,TYMax);
 
     if((TMin > TYMax) || (TYMin > TMax))
     {
@@ -37,6 +39,7 @@ bool Box::Intersects(Ray Ray, double &t)
     if(TZMax < TMax)
     {
         TMax = TZMax;
+        return true;
     }
 
     return true;
@@ -44,5 +47,14 @@ bool Box::Intersects(Ray Ray, double &t)
 
 glm::vec3 Box::GetNormal(glm::vec3 &Pi)
 {
-    return Pi;
+    if (Pi.x < 0)
+    {
+        return glm::vec3(-1,0,0);
+    }
+    else if (Pi.x > 0)
+    {
+        return glm::vec3 (1,0,0);
+    }
+    
+    return glm::vec3 (0,0,-1);
 }

@@ -29,7 +29,7 @@ public:
         const float r = Radius;
         const glm::vec3 o = Ray.Origin;
         const glm::vec3 d = Ray.Direction;
-        const glm::vec3 oc = o - C;
+        const glm::vec3 oc = o - (C + Position);
         const double b = 2 * dot(oc, d);
         const double c = dot(oc, oc) - r*r;
         double disc = b*b - 4 * c;
@@ -43,7 +43,7 @@ public:
     }
     glm::vec3  GetNormal(glm::vec3& Pi) override
     {
-        glm::vec3  XX = (Pi - C);
+        glm::vec3  XX = (Pi - (C + Position));
         return glm::vec3 (XX.x / Radius, XX.y / Radius, XX.z / Radius);
     }
 };
@@ -52,14 +52,16 @@ public:
 class RayTracer
 {
 public:
-    std::vector<RaytraceObject> Objects;
+    std::vector<RaytraceObject*> Objects;
     RayTracer(SDL_Surface* Surface);
     void Update();
 
 private:
+    float Time;
     SDL_Surface* Surface;
     bool Intersect(Ray Ray);
-    void TraceObject(RaytraceObject& Object, Ray FRay, double &t, int x, int y);
-    int TraceColor(RaytraceObject& Object, Ray FRay, double &t, int x,int y,RayTraceResult & OutResult);
+    bool Trace(Ray Ray,std::vector<RaytraceObject*>& Objects, double & TNear,RaytraceObject*& HitObject);
+    void TraceObject(RaytraceObject* Object, Ray FRay, double &t, int x, int y);
+    int TraceColor(RaytraceObject* Object, Ray FRay, double &t, int x,int y,RayTraceResult & OutResult);
 };
 
