@@ -26,9 +26,9 @@ void RayTracer::Update()
     Ray Ray(glm::vec3(0,0, 0),glm::vec3(0,0,20));
     float Depth = 0;
 
-    for(int y = 0;y < RenderHeight; y++)
+    for(int x = 0;x < RenderWidth; x++)
     {
-        for(int x = 0;x < RenderWidth; x++)
+        for(int y = 0;y < RenderHeight; y++)
         {
             Ray.Origin = glm::vec3(x,y,0);
             glm::vec3 ColorToSet = CastRay(Ray,Objects);
