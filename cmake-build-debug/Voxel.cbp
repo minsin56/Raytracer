@@ -82,16 +82,19 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/vincent/CLionProjects/Voxel/src/Box.cpp">
-			<Option target="Voxel"/>
-		</Unit>
-		<Unit filename="C:/Users/vincent/CLionProjects/Voxel/src/Box.h">
+		<Unit filename="C:/Users/vincent/CLionProjects/Voxel/src/Material.h">
 			<Option target="Voxel"/>
 		</Unit>
 		<Unit filename="C:/Users/vincent/CLionProjects/Voxel/src/RayTracer.cpp">
 			<Option target="Voxel"/>
 		</Unit>
 		<Unit filename="C:/Users/vincent/CLionProjects/Voxel/src/RayTracer.h">
+			<Option target="Voxel"/>
+		</Unit>
+		<Unit filename="C:/Users/vincent/CLionProjects/Voxel/src/Sphere.cpp">
+			<Option target="Voxel"/>
+		</Unit>
+		<Unit filename="C:/Users/vincent/CLionProjects/Voxel/src/Sphere.h">
 			<Option target="Voxel"/>
 		</Unit>
 		<Unit filename="C:/Users/vincent/CLionProjects/Voxel/src/Utils.cpp">

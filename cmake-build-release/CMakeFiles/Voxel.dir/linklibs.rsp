@@ -1,0 +1,1 @@
+  -LC:/Users/vincent/CLionProjects/Voxel/libs/lib  -lSDL2 -Wl,-Bstatic -lSDl2 -lSDl2main -Wl,-Bdynamic -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

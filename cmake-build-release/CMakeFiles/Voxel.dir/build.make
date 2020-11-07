@@ -65,7 +65,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = C:\Users\vincent\CLionProjects\Voxel
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\vincent\CLionProjects\Voxel\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\vincent\CLionProjects\Voxel\cmake-build-release
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Voxel.dir/depend.make
@@ -79,7 +79,7 @@ include CMakeFiles/Voxel.dir/flags.make
 CMakeFiles/Voxel.dir/src/main.cpp.obj: CMakeFiles/Voxel.dir/flags.make
 CMakeFiles/Voxel.dir/src/main.cpp.obj: CMakeFiles/Voxel.dir/includes_CXX.rsp
 CMakeFiles/Voxel.dir/src/main.cpp.obj: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\vincent\CLionProjects\Voxel\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Voxel.dir/src/main.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\vincent\CLionProjects\Voxel\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Voxel.dir/src/main.cpp.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Voxel.dir\src\main.cpp.obj -c C:\Users\vincent\CLionProjects\Voxel\src\main.cpp
 
 CMakeFiles/Voxel.dir/src/main.cpp.i: cmake_force
@@ -93,7 +93,7 @@ CMakeFiles/Voxel.dir/src/main.cpp.s: cmake_force
 CMakeFiles/Voxel.dir/src/RayTracer.cpp.obj: CMakeFiles/Voxel.dir/flags.make
 CMakeFiles/Voxel.dir/src/RayTracer.cpp.obj: CMakeFiles/Voxel.dir/includes_CXX.rsp
 CMakeFiles/Voxel.dir/src/RayTracer.cpp.obj: ../src/RayTracer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\vincent\CLionProjects\Voxel\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Voxel.dir/src/RayTracer.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\vincent\CLionProjects\Voxel\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Voxel.dir/src/RayTracer.cpp.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Voxel.dir\src\RayTracer.cpp.obj -c C:\Users\vincent\CLionProjects\Voxel\src\RayTracer.cpp
 
 CMakeFiles/Voxel.dir/src/RayTracer.cpp.i: cmake_force
@@ -107,7 +107,7 @@ CMakeFiles/Voxel.dir/src/RayTracer.cpp.s: cmake_force
 CMakeFiles/Voxel.dir/src/Utils.cpp.obj: CMakeFiles/Voxel.dir/flags.make
 CMakeFiles/Voxel.dir/src/Utils.cpp.obj: CMakeFiles/Voxel.dir/includes_CXX.rsp
 CMakeFiles/Voxel.dir/src/Utils.cpp.obj: ../src/Utils.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\vincent\CLionProjects\Voxel\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Voxel.dir/src/Utils.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\vincent\CLionProjects\Voxel\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Voxel.dir/src/Utils.cpp.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Voxel.dir\src\Utils.cpp.obj -c C:\Users\vincent\CLionProjects\Voxel\src\Utils.cpp
 
 CMakeFiles/Voxel.dir/src/Utils.cpp.i: cmake_force
@@ -121,7 +121,7 @@ CMakeFiles/Voxel.dir/src/Utils.cpp.s: cmake_force
 CMakeFiles/Voxel.dir/src/Sphere.cpp.obj: CMakeFiles/Voxel.dir/flags.make
 CMakeFiles/Voxel.dir/src/Sphere.cpp.obj: CMakeFiles/Voxel.dir/includes_CXX.rsp
 CMakeFiles/Voxel.dir/src/Sphere.cpp.obj: ../src/Sphere.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\vincent\CLionProjects\Voxel\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Voxel.dir/src/Sphere.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\vincent\CLionProjects\Voxel\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Voxel.dir/src/Sphere.cpp.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Voxel.dir\src\Sphere.cpp.obj -c C:\Users\vincent\CLionProjects\Voxel\src\Sphere.cpp
 
 CMakeFiles/Voxel.dir/src/Sphere.cpp.i: cmake_force
@@ -150,7 +150,7 @@ Voxel.exe: CMakeFiles/Voxel.dir/build.make
 Voxel.exe: CMakeFiles/Voxel.dir/linklibs.rsp
 Voxel.exe: CMakeFiles/Voxel.dir/objects1.rsp
 Voxel.exe: CMakeFiles/Voxel.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\vincent\CLionProjects\Voxel\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable Voxel.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\vincent\CLionProjects\Voxel\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable Voxel.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Voxel.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -163,6 +163,6 @@ CMakeFiles/Voxel.dir/clean:
 .PHONY : CMakeFiles/Voxel.dir/clean
 
 CMakeFiles/Voxel.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\vincent\CLionProjects\Voxel C:\Users\vincent\CLionProjects\Voxel C:\Users\vincent\CLionProjects\Voxel\cmake-build-debug C:\Users\vincent\CLionProjects\Voxel\cmake-build-debug C:\Users\vincent\CLionProjects\Voxel\cmake-build-debug\CMakeFiles\Voxel.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\vincent\CLionProjects\Voxel C:\Users\vincent\CLionProjects\Voxel C:\Users\vincent\CLionProjects\Voxel\cmake-build-release C:\Users\vincent\CLionProjects\Voxel\cmake-build-release C:\Users\vincent\CLionProjects\Voxel\cmake-build-release\CMakeFiles\Voxel.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Voxel.dir/depend
 

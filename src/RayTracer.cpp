@@ -1,98 +1,77 @@
+#define NOMINMAX
 
 #include "RayTracer.h"
 #include<iostream>
+#include<math.h>
 float Time = 0;
 
 RayTracer::RayTracer(SDL_Surface *Surface)
 {
     this->Surface = Surface;
     Objects = std::vector<RaytraceObject*>();
-    
-    Objects.push_back(new Sphere(glm::vec3(800 * 0.5f, 800 * 0.5f,50),100));
-    Objects.push_back(new Sphere(glm::vec3(800 * 0.5f + 200, 600 * 0.5f,100),50));
-    Objects.push_back(new Box(glm::vec3(200,200,200),glm::vec3(250,250,250)));
+    Sphere* Sphere1 = new Sphere(glm::vec3(800 * 0.5f, 800 * 0.5f,40),100);
+    Sphere1->FMat.Color = glm::vec3 (124, 230, 100);
+    Sphere1->FMat.IsReflective = true;
+    Objects.push_back(Sphere1);
+    Objects.push_back(new Sphere(glm::vec3(800 * 0.5f + 300, 600 * 0.5f,10),50));
 }
 void RayTracer::Update()
 {
     Time += 0.01f;
     Utils::ClearPixel(Surface);
-    Ray FRay = Ray(glm::vec3(0,0,-60),glm::vec3());
+    Ray FRay = Ray(glm::vec3(0,0,0),glm::vec3());
     float Distance = 0;
     double t;
     Time += 0.001f;
-    Ray Ray(glm::vec3(0,0, 0),glm::vec3(0,0,1));
+    Ray Ray(glm::vec3(0,0, 0),glm::vec3(0,0,20));
     float Depth = 0;
-    
-    while(Depth < 2)
+
+    for(int y = 0;y < RenderHeight; y++)
     {
-        for(int y = 0;y < RenderHeight; y++)
+        for(int x = 0;x < RenderWidth; x++)
         {
-            for(int x = 0;x < RenderWidth; x++)
-            {
-                Ray.Origin = glm::vec3(x,y,-60);
-                RaytraceObject* Object;
-                if (Trace(Ray,Objects,t,Object))
-                {
-                    TraceObject(Object, Ray, t, x, y);
-                }
-                Depth += 0.01f;
-            }
+            Ray.Origin = glm::vec3(x,y,0);
+            glm::vec3 ColorToSet = CastRay(Ray,Objects);
+            
+            Utils::SetPixel(Surface,x,y,ColorToSet.x,ColorToSet.y,ColorToSet.z);
         }
+
     }
 }
 
-
-bool RayTracer::Trace(Ray Ray, std::vector<RaytraceObject*> &Objects, double &TNear, RaytraceObject *&HitObject)
+bool RayTracer::Trace(Ray Ray, std::vector<RaytraceObject *> &Objects, double &TNear, RaytraceObject *& HitObject)
 {
-    TNear = 9999999;
-    for(RaytraceObject* Object: Objects)
+    TNear = INFINITY;
+    for(int i = 0;i<Objects.size();i++)
     {
-        double T = 0;
-        if(Object->Intersects(Ray,T) && T < TNear)
+        double t = INFINITY;
+        if (Objects[i]->Intersects(Ray,t) && t < TNear)
         {
-            HitObject = Object;
-            TNear = T;
+            HitObject = Objects[i];
+            TNear = t;
         }
     }
     
-    return HitObject != nullptr;
-}
-
-int RayTracer::TraceColor(RaytraceObject* Object, Ray FRay, double &t, int x, int y,RayTraceResult & OutResult)
-{
-    if (Object->Intersects(FRay, t))
-    {
-        glm::vec3  LOrigin = FRay.Origin;
-        LOrigin.z = 0;
-        glm::vec3 Pi = LOrigin + FRay.Direction * (float)t;
-        const glm::vec3 L =  (Object->Position + glm::vec3 (0,0,50)) - Pi;
-        const glm::vec3 N = Object->GetNormal(Pi);
-        double DT = dot(glm::normalize(L),glm::normalize(N));
-        if (DT < 0.2f) DT = 0.2;
-        int Color = 255 * DT;
-        RayTraceResult Result;
-        Result.Color = Color;
-        Result.DidIntersect = true;
-        OutResult = Result;
-        return Color;
-    }
-    RayTraceResult Result;
-    Result.Color = 0;
-    Result.DidIntersect = false;
-    OutResult = Result;
+    if(!HitObject) return false;
     
-    return 0;
-}
-
-void RayTracer::TraceObject(RaytraceObject* Object, Ray FRay, double &t, int x, int y)
-{
-    RayTraceResult Result;
-    TraceColor(Object,FRay,t,x,y, Result);
     
-    if(Result.DidIntersect)
-    {
-        Utils::SetPixel(Surface,x,y,Result.Color,Result.Color,Result.Color);
-    }
-
+    return true;
 }
 
+glm::vec3 RayTracer::CastRay(Ray Ray, std::vector<RaytraceObject*> Objects)
+{
+    glm::vec3 HitColor = glm::vec3(135,206,250);
+    RaytraceObject* Object = nullptr;
+    double t;
+    if (Trace(Ray,Objects,t,Object))
+    {
+        glm::vec3 PHit = Ray.Origin + Ray.Direction * glm::vec3 (t,t,t);
+        glm::vec3 NHit = Object->GetNormal(PHit);
+        double c = std::max(0.0f, glm::dot(NHit,Ray.Direction)) * 0.5f;
+        HitColor = glm::vec3(Object->FMat.Color.x * c,Object->FMat.Color.y * c,Object->FMat.Color.z * c);
+
+    }
+    
+    return HitColor;
+    
+}
